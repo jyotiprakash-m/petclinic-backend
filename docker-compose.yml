@@ -14,7 +14,7 @@ services:
     - "8180:8180"
     environment:
       - JAVA_OPTS=
-            -DEUREKA_SERVER=http://eureka-server:8761/eureka -DDB_USER=xxx -DDB_PASSWORD=xxx -DJDBC_URL=jdbc:mariadb://xxx
+            -DEUREKA_SERVER=http://eureka-server:8761/eureka -DDB_USER=* -DDB_PASSWORD=* -DJDBC_URL=jdbc:mariadb://*
       
     links: 
         - eureka-server
@@ -25,7 +25,7 @@ services:
     - "8280:8280"
     environment:
       - JAVA_OPTS=
-            -DEUREKA_SERVER=http://eureka-server:8761/eureka -DDB_USER=xxx -DDB_PASSWORD=xxx -DJDBC_URL=jdbc:mariadb://xxx
+            -DEUREKA_SERVER=http://eureka-server:8761/eureka -DDB_USER=* -DDB_PASSWORD=* -DJDBC_URL=jdbc:mariadb://*
       
     links: 
         - eureka-server
@@ -37,7 +37,7 @@ services:
     - "8380:8380"
     environment:
       - JAVA_OPTS=
-            -DEUREKA_SERVER=http://eureka-server:8761/eureka -DDB_USER=xxx -DDB_PASSWORD=xxx -DJDBC_URL=jdbc:mariadb://xxx
+            -DEUREKA_SERVER=http://eureka-server:8761/eureka -DDB_USER=* -DDB_PASSWORD=* -DJDBC_URL=jdbc:mariadb://*
       
     links: 
         - eureka-server
