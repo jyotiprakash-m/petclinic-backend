@@ -1,0 +1,30 @@
+server:
+  port: 8380
+spring:
+  application:
+    name: visit-service
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    password: ${DB_PASSWORD:root}
+    url: ${JDBC_URL:jdbc:mariadb://localhost:3306/petclinic_visitservice_db}
+    username: ${DB_USER:root}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+# Log Configuration
+logging:
+  level:
+    root: INFO
+    com:
+      demo:
+        spring: TRACE
+
+# Eureka Client
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka/}

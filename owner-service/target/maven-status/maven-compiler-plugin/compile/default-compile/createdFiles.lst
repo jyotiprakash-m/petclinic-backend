@@ -1,0 +1,10 @@
+com\demo\spring\repository\OwnerServiceOwnerRepository.class
+com\demo\spring\rest\OwnerServiceValidPetRestController.class
+com\demo\spring\util\Message.class
+com\demo\spring\OwnerServiceApplication.class
+com\demo\spring\entity\ValidPet.class
+com\demo\spring\entity\Pet.class
+com\demo\spring\repository\OwnerServiceValidPetRepository.class
+com\demo\spring\entity\Owner.class
+com\demo\spring\repository\OwnerServicePetRepository.class
+com\demo\spring\rest\OwnerServiceRestController.class

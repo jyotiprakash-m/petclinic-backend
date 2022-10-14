@@ -1,0 +1,57 @@
+version: '3'
+services:
+  eureka-server:
+    image: eureka-server:0.1
+    container_name: eureka-server
+    expose:
+    - "8761"
+    ports: 
+    - 8761:8761 
+  owner-service:
+    image: owner-service:0.1
+    container_name: owner-service
+    ports:
+    - "8180:8180"
+    environment:
+      - JAVA_OPTS=
+            -DEUREKA_SERVER=http://eureka-server:8761/eureka -DDB_USER=admin -DDB_PASSWORD=welcome1 -DJDBC_URL=jdbc:mariadb://training.cy8hyp7r7owp.us-east-1.rds.amazonaws.com:3306/petclinic_ownerservice_db
+      
+    links: 
+        - eureka-server
+  vet-service:
+    image: vet-service:0.1
+    container_name: vet-service
+    ports:
+    - "8280:8280"
+    environment:
+      - JAVA_OPTS=
+            -DEUREKA_SERVER=http://eureka-server:8761/eureka -DDB_USER=admin -DDB_PASSWORD=welcome1 -DJDBC_URL=jdbc:mariadb://training.cy8hyp7r7owp.us-east-1.rds.amazonaws.com:3306/petclinic_vetservice_db  #(name of eureka host==eureka container name)
+      
+    links: 
+        - eureka-server
+        
+  visit-service:
+    image: visit-service:0.1
+    container_name: visit-service
+    ports:
+    - "8380:8380"
+    environment:
+      - JAVA_OPTS=
+            -DEUREKA_SERVER=http://eureka-server:8761/eureka -DDB_USER=admin -DDB_PASSWORD=welcome1 -DJDBC_URL=jdbc:mariadb://training.cy8hyp7r7owp.us-east-1.rds.amazonaws.com:3306/petclinic_visitservice_db  #(name of eureka host==eureka container name)
+      
+    links: 
+        - eureka-server
+        
+  api-gateway:
+    image: pet-clinic-api-gateway:0.1
+    ports:
+    - "8480:8480"
+    environment:
+      - JAVA_OPTS=
+            -DEUREKA_SERVER=http://eureka-server:8761/eureka  #(name of eureka host==eureka container name)
+      
+    links: 
+        - eureka-server
+        - owner-service
+        - vet-service
+        - visit-service

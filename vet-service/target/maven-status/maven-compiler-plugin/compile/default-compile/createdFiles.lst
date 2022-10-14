@@ -1,0 +1,8 @@
+com\demo\spring\util\Message.class
+com\demo\spring\VetServiceApplication.class
+com\demo\spring\repository\VetServiceVetRepository.class
+com\demo\spring\entity\Vet.class
+com\demo\spring\rest\VetServiceSpecialityRestController.class
+com\demo\spring\repository\VetServiceSpecialityRepository.class
+com\demo\spring\rest\VetServiceVetRestController.class
+com\demo\spring\entity\Specialty.class

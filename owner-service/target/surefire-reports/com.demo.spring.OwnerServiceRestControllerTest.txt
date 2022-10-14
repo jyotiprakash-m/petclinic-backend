@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.demo.spring.OwnerServiceRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 16.632 s - in com.demo.spring.OwnerServiceRestControllerTest

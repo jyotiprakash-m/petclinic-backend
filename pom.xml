@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.7.1</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+  <groupId>com.demo.spring</groupId>
+  <artifactId>pet-clinic-project</artifactId>
+  <version>0.1</version>
+  <packaging>pom</packaging>
+  <name>pet-clinic-project</name>
+  <description>Pet clinic project</description>
+  <modules>
+  	<module>owner-service</module>
+  	<module>vet-service</module>
+  	<module>visit-service</module>
+  	<module>pet-clinic-api-gateway</module>
+  	<module>eureka-server</module>
+  </modules>
+  
+</project>

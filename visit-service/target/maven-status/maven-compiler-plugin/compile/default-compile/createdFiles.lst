@@ -1,0 +1,8 @@
+com\demo\spring\entity\Visit.class
+com\demo\spring\util\Message.class
+com\demo\spring\rest\VisitServiceVisitRestController.class
+com\demo\spring\entity\Pet.class
+com\demo\spring\repository\VisitorServicePetRepository.class
+com\demo\spring\rest\VisitServicePetRestController.class
+com\demo\spring\repository\VisitServiceVisitRepository.class
+com\demo\spring\VisitServiceApplication.class
